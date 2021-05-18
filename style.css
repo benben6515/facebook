@@ -1,0 +1,695 @@
+
+/* facebook 動手畫XD ---------------------------------------- */
+svg#facebook__logo {
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+}
+svg#facebook__logo>circle {
+    cx: 24px;
+    cy: 24px;
+    r: 20px;
+    fill: #087BEA;
+}
+svg#facebook__logo>text {
+    fill: #fff;
+    stroke: none;
+    font-size: 48px;
+}
+
+/* Lidemy 動手畫XD ---------------------------------------- */
+svg#lidemy__logo {
+    width: 36px;
+    height: 36px;
+    overflow: hidden;
+}
+svg#lidemy__logo>rect {
+    x: 0px;
+    y: 0px;
+    width: 36px;
+    height: 36px;
+    fill: #f24;
+}
+svg#lidemy__logo>text {
+    fill: #fff;
+    stroke: none;
+    font-size: 22px;
+}
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+
+}
+body {
+    margin-bottom: 100px;
+}
+
+* {
+    font-family: 微軟正黑體;
+    position: relative;
+}
+hr {
+    margin: 8px;
+}
+
+/* navbar ---------------------------------------- */
+.navbar {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    z-index: 5;
+}
+
+.navbar__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__logo {
+    width: 44px;
+    height: 44px;
+}
+
+.navbar__search__bar {
+    width: 180px;
+    height: 44px;
+    display: flex;
+    background-color: #eee;
+    border-radius: 22px;
+    margin-top: 2px;
+}
+
+.navbar__search {
+    width: 44px;
+    height: 44px;
+    display: inline-block;
+    background: none;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 44px;
+    vertical-align: middle;
+    min-width: 44px;
+}
+
+.navbar__search__txt {
+    border: none;
+    background: none;
+    outline: none;
+    line-height: 44px;
+    width: 100%;
+}
+
+.navbar__items {
+    width: 50%;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 480px;
+    min-width: 400px;
+}
+
+.navbar__item__home,
+.navbar__item__vedio,
+.navbar__item__shop,
+.navbar__item__group,
+.navbar__item__game {
+    width: 18%;
+    height: 48px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 48px;
+    font-size: 24px;
+    vertical-align: middle;
+    max-width: 100px;
+    min-width: 40px;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.active:after,
+.navbar__item__home:hover:after,
+.navbar__item__vedio:hover:after,
+.navbar__item__shop:hover:after,
+.navbar__item__group:hover:after,
+.navbar__item__game:hover:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #087BEA;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar__user {
+    width: 12%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 110px;
+    min-width: 90px;
+}
+
+.navbar__user__pic {
+    width: 40px;
+    height: 40px;
+    background-image: URL("avatar.jpg");
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+}
+
+.navbar__user {
+    font-size: 16px;
+}
+
+.navbar__more {
+    width: 10%;
+    height: 48px;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    line-height: 48px;
+    font-size: 24px;
+    vertical-align: middle;
+    max-width: 60px;
+    min-width: 20px;
+}
+
+.navbar__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 180px;
+}
+
+.navbar__icon__menu,
+.navbar__icon__message,
+.navbar__icon__notification,
+.navbar__icon__account {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    font-size: 21px;
+    vertical-align: middle;
+    background-color: #ccc;
+}
+
+
+/* section 1  ---------------------------------------- */
+.section__1__stories {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    top: 60px;
+    max-width: 600px;
+    min-width: 520px;
+    margin: 20px auto;
+    height: 200px;
+}
+
+.section__1__my__story,
+.section__1__story {
+    flex-direction: row;
+    width: 18%;
+    max-width: 160px;
+    min-width: 80px;
+    height: 180px;
+    vertical-align: top;
+    margin: 2px 3px;
+}
+
+.section__1__my__story,
+.section__1__story {
+    border-radius: 10px;
+    overflow: hidden;
+}
+.section__1__my__story {
+    background-color: #fff;
+}
+
+.section__1__my__story__top {
+    background-image: URL("avatar.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 120px;
+    filter: brightness(0.8);
+    transition: 0.3s ease-in;
+}
+.section__1__my__story__icon {
+    width: 30px;
+    height: 30px;
+    background-color: #087BEA;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.section__1__my__story__icon:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 1px;
+
+}
+.section__1__my__story__icon:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    width: 15px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 1px;
+
+}
+.section__1__my__story__bottom {
+    width: 100%;
+    position: absolute;
+    bottom: 2px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* section__1 共同 css */
+.section__1__story1__pic,
+.section__1__story2__pic,
+.section__1__story3__pic,
+.section__1__story4__pic {
+    background-size: cover;
+    background-position: center center;
+    height: 180px;
+    filter: brightness(0.8);
+    transition: 0.3s ease-in;
+}
+.section__1__story1__author,
+.section__1__story2__author,
+.section__1__story3__author,
+.section__1__story4__author {
+    width: 30px;
+    height: 30px;
+    background-image: URL('p-1.png');
+    background-size: cover;
+    border: 4px solid #087BEA;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.section__1__story1__name,
+.section__1__story2__name,
+.section__1__story3__name,
+.section__1__story4__name {
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+
+.section__1__story1__pic {
+    background-image: URL('f-001.png');
+}
+.section__1__story1__author {
+    background-image: URL('p-1.png');
+}
+.section__1__story2__pic {
+    background-image: URL('f-002.png');
+}
+.section__1__story2__author {
+    background-image: URL('p-2.png');
+}
+.section__1__story3__pic {
+    background-image: URL('f-003.png');
+}
+.section__1__story3__author {
+    background-image: URL('p-3.png');
+    border: 4px solid #fff;
+}
+.section__1__story4__pic {
+    background-image: URL('f-004.png');
+}
+.section__1__story4__author {
+    background-image: URL('p-1.png');
+    border: 4px solid #fff;
+}
+
+.section__1__my__story__top:hover,
+.section__1__story1__pic:hover,
+.section__1__story2__pic:hover,
+.section__1__story3__pic:hover,
+.section__1__story4__pic:hover {
+    filter: brightness(0.6);
+    cursor: pointer;
+}
+
+
+/* section 2, 3, 4  共同 css  ---------------------------------------- */
+.section__2__thought,
+.section__3__friends,
+.section__4__posts {
+    display: block;
+    width: 50%;
+    top: 60px;
+    max-width: 500px;
+    min-width: 420px;
+    margin: 20px auto;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+/* section 2  ---------------------------------------- */
+.section__2__thought__top,
+.section__2__thought__bottom {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.section__2__thought__pic {
+    height: 40px;
+    width: 40px;
+    background-image: URL("avatar.jpg");
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+}
+.section__2__thought__input {
+    border-radius: 25px;
+    width: 85%;
+    background-color: #eee;
+}
+.section__2__thought__txt {
+    border: none;
+    background: none;
+    outline: none;
+    line-height: 40px;
+    font-size: 20px;
+    width: 100%;
+    padding-left: 10px;
+}
+.section__2__thought__left,
+.section__2__thought__middle,
+.section__2__thought__right {
+    font-weight: bold;
+    color: #888;
+}
+
+/* section 3  ---------------------------------------- */
+.section__3__friends {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section__3__friends__icon {
+    width: 110px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 1px 1px lightskyblue;
+    text-align: center;
+}
+.section__3__friends__wrapper {
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+}
+.section__3__friends__1,
+.section__3__friends__2,
+.section__3__friends__3 {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center center;
+}
+.section__3__friends__1 {
+    background-image: url("p-1.png");
+}
+.section__3__friends__2 {
+    background-image: url("p-2.png");
+}
+.section__3__friends__3 {
+    background-image: url("p-3.png");
+}
+.section__3__friends__1:after,
+.section__3__friends__2:after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    background-color: limegreen;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+/* section 4  ---------------------------------------- */
+.section__4__posts__top {
+    display: flex;
+    justify-content: start;
+}
+.section__4__posts__pic {
+    height: 40px;
+    width: 40px;
+    background-image: URL("avatar.jpg");
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+}
+.section__4__posts__top__wrapper {
+    margin-left: 10px;
+}
+.section__4__posts__name {
+    font-weight: bold;
+}
+.section__4__posts__info,
+.section__4__posts__comments {
+    font-size: 14px;
+    color: #444;
+}
+.section__4__posts__top__menu {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    color: #444;
+}
+.section__4__posts__context {
+    margin: 10px 0px;
+}
+.section__4__posts__iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+}
+.section__4__posts__goods {
+    left: 3px;
+    cursor: pointer;
+}
+.section__4__posts__goods:hover {
+    left: 0px;
+    border-left: 3px solid #087BEA;
+
+}
+.section__4__posts__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/* aside css ----------------------------------------- */
+.aside__right {
+    width: 21%;
+    height: 100%;
+    display: block;
+    position: fixed;
+    top: 48px;
+    right: 0px;
+    margin: 10px;
+}
+.aside__right__title,
+.aside__right__bottom__title,
+.aside__left__bottom__title {
+    color: #666;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 15px;
+}
+.aside__right__pic {
+    width: 100%;
+    height: 200px;
+    border: none;
+}
+.aside__right__bottom__wrapper,
+.aside__left__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px;
+}
+.aside__right__bottom__pic1,
+.aside__right__bottom__pic2,
+.aside__right__bottom__pic3 {
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+}
+.aside__right__bottom__pic1 {
+    background-image: url("p-1.png");
+}
+.aside__right__bottom__pic2 {
+    background-image: url("p-2.png");
+}
+.aside__right__bottom__pic3 {
+    background-image: url("p-3.png");
+}
+.aside__right__bottom__pic1:after,
+.aside__right__bottom__pic2:after {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    background-color: limegreen;
+    border: 1.5px solid #fff;
+    border-radius: 50%;
+}
+.aside__right__bottom__name1,
+.aside__right__bottom__name2,
+.aside__right__bottom__name3 {
+    margin-left: 10px;
+}
+/* aside left ----------------------------------------- */
+.aside__left {
+    width: 21%;
+    height: 100%;
+    display: block;
+    position: fixed;
+    top: 48px;
+    left: 0px;
+}
+.aside__left__wrapper {
+    display: flex;
+    align-items: center;
+}
+.aside__left__top__pic {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+}
+.aside__left__top__pic.pic1 {
+    background-image: URL("avatar.jpg");
+}
+.aside__left__top__title {
+    margin-left: 10px;
+    font-size: 16px;
+}
+.aside__left__bottom__title {
+    margin: 0px 10px;
+}
+.aside__left__bottom__pic {
+    width: 36px;
+    height: 36px;
+    border-radius: 5px;
+    overflow: hidden;
+    min-width: 36px;
+    min-height: 36px;
+}
+.aside__left__bottom__link {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+.aside__left__bottom__link:active {
+    text-decoration: none;
+    color: #666;
+}
+
+/* RWD ---------------------------------------- */
+@media (max-width:376px) {
+    .navbar__icon {
+        margin: 2px 8px;
+    }
+}
+
+@media (max-width:768px) {
+    .navbar__items {
+        display: none;
+    }
+    .navbar__search__bar {
+        width: 80px;
+    }
+    .section__2__thought,
+    .section__3__friends,
+    .section__4__posts {
+        width: 90%;
+        top: 60px;
+        max-width: 360px;
+        min-width: 300px;
+        margin: 20px auto;
+        padding: 10px;
+    }
+    .section__3__friends {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .section__3__friends__wrapper {
+        width: 80%;
+        margin: 10px;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width:920px) {
+    .navbar__search__txt, .aside__right {
+        display: none;
+    }
+    .navbar__search__bar {
+        width: 50px;
+    }
+}
+
+@media (max-width:1020px) {
+    .navbar__user, .aside__left {
+        display: none;
+    }
+}
